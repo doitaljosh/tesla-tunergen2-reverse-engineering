@@ -15,8 +15,10 @@ The HARMAN tuner is an ARM Linux device based on the TI Jacinto 5 platform. It i
 
 ## Software architecture:
 ### Audio stream:
-                         Tuner side                           |                         ICE side                           
-snd_soc_tunergen2-->ntg6csb_audiorouting-->avbcontroller-->ethernet-->avb_streamhandler-->alsabridge-->audioweaver-->audiod
+|Tuner side|Physical|ICE side|
+|---|---|---|
+|snd_soc_tunergen2-->ntg6csb_audiorouting-->avbcontroller|ethernet|avb_streamhandler-->alsabridge-->audioweaver-->audiod|
 ### Command stream:
-             ICE side            |                   Tuner side                       
-QtCarRadioServer-->vsomeipd-->ethernet-->vsomeipd-->TunerApp-->spi_dab_plugin-->spidev
+|ICE side|Physical|Tuner side|
+|---|---|---|
+|QtCarRadioServer-->vsomeipd|ethernet|vsomeipd-->TunerApp-->spi_dab_plugin-->spidev|
