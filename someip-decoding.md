@@ -9,7 +9,7 @@ decoder built-in for the high-level API. Below are some that I've already decode
 ## Payload dump samples:
 
 ### Tune to 93300Mhz:
-
+```
 Service ID:	0x0065
 Method ID:	0x0005
 Length:		28
@@ -22,8 +22,8 @@ Return code:	0x00 (ok)
 Payload:
 0000   00 00 00 ff 00 01 6c 74 00 00 00 00 00 00 00 01
 0010   00 00 00 00
-
-Payload fields:
+```
+### Payload fields:
 
 |Bytes|Type|Value|
 |---|---|---|
@@ -35,7 +35,7 @@ Payload fields:
 
 
 ### Response:
-
+```
 Service ID:	0x0065
 Method ID:	0x0005
 Length:		8
@@ -45,9 +45,9 @@ SOME/IP ver:	1
 Interface ver:	2
 Message type:	0x80 (response)
 Return code:	0x00 (ok)
-
-Get station info:
-
+```
+###Get station info:
+```
 Service ID:	0xffff
 Method ID:	0x8100
 Length:		48
@@ -83,8 +83,9 @@ Reserved: 0x000000: 	0x00
 Reserved: 0x000000:	0x00
 	Protocol:	0x06 (TCP)
 	Port:		0xecd2 60626
-	
-Response:
+```	
+### Response:
+```
 Service ID:	0xffff
 Method ID:	0x8100
 Length:		36
@@ -111,8 +112,9 @@ Reserved: 0x000000:	0x00
 	Mask:		0x00
 	EventGroup ID:	0x00c9
 OptsArray len:	0x00000000
-
-Subscribed response:
+```
+### Subscribed response:
+```
 Service ID:	0x0065
 Method ID:	0x8005
 Length:		411
@@ -149,7 +151,7 @@ Payload:
 0170   5a 00 8d 00 00 00 04 00 00 00 09 00 00 07 00 00
 0180   00 00 0c 00 00 00 19 00 00 00 43 00 00 00 3c 00
 0190   00 00 03
-
+```
 ### tunert output:
 ```
 STATION EVENT
@@ -178,83 +180,44 @@ STATION EVENT
 |Bytes|Data type|Value|
 |---|---|---|
 |[0:3]|type|65|
-
 |[4:7]|frequency|93300|
-
 |[8:11]|Unknown|16|
-
 |[12:15]|Station ID1|0x203a1313|
-
 |[16:19]|Station ID2|0x00001313|
-
 |[20:23]|HD Station ID1|0x00000001|
-
 |[24:27]|HD Station ID2|0x00000000|
-
 |[28:31]|Unknown|32768|
-
 |[32:35]|Unknown|138 10001010|
-
 |[36:39]|Unknown|144 10010000|
-
 |[40:55]|FM1 text|Size: 12,Magic: 0xefbbbf,FM1 radiotext: "93-3 FLZ"|
-
 |[56:71]|FM2 text|Size: 12,Magic: 0xefbbbf,FM2 radiotext: "93-3 FLZ"|
-
 |[72:87]|FM3 text|Size: 12,Magic: 0xefbbbf,FM3 radiotext: "93-3 FLZ"|
-
 |[88:99]|Station code|Size: 8,Magic: 0xefbbbf,Station code: "FLZ "|
-
-|[100:155]|Station name full|Size: 42,Magic: 0xefbbbf,Station name full: "93-3 FLZ E.T. Katy Perry / Kanye West     "|
-		
+|[100:155]|Station name full|Size: 42,Magic: 0xefbbbf,Station name full: "93-3 FLZ E.T. Katy Perry / Kanye West     "|	
 |[156:171]|Station name short 1|Size: 12,Magic: 0xefbbbf,Station name short: "93-3 FLZ"|
-		
 |[172:179]|Genre|Size: 4,Magic: 0xefbbbf,Genre: 0|
-		
 |[180:187]|Unknown|193|
-		
-|[188:255]|Station name long|Size: 64,Magic: 0xefbbbf,Station name long: "93-3 FLZ Anidjar & Levine 1-800-747-FREE  Accident Attorneys    "|
-			
+|[188:255]|Station name long|Size: 64,Magic: 0xefbbbf,Station name long: "93-3 FLZ Anidjar & Levine 1-800-747-FREE  Accident Attorneys    "|	
 |[256]|Unknown|32|
-		
-|[257:272]|Station name short 2|Size: 12,Magic: 0xefbbbf,Station name short: "93-3 FLZ"|
-			
+|[257:272]|Station name short 2|Size: 12,Magic: 0xefbbbf,Station name short: "93-3 FLZ"|	
 |[273]|Unknown|31|
-		
-|[274:285]|Title 1|Size: 8,Magic: 0xefbbbf,Title: "E.T. "|
-			
+|[274:285]|Title 1|Size: 8,Magic: 0xefbbbf,Title: "E.T. "|	
 |[286]|Unknown|1|
-		
-|[287:317]|Artist 1|Size: 27,Magic: 0xefbbbf,Artist: "Katy Perry / Kanye West "|
-			
+|[287:317]|Artist 1|Size: 27,Magic: 0xefbbbf,Artist: "Katy Perry / Kanye West "|	
 |[318]|Unknown|4|
-		
 |[319:349]|Artist 2|Size: 27,Magic: 0xefbbbf,Artist: "Katy Perry / Kanye West "|
-	
 |[350]|Unknown|128|
-		
 |[351:362]|Title 2|Size: 8,Magic: 0xefbbbf,Title: "E.T. "|
-		
 |[363]|Unknown|129|
-		
 |[364:379]|Station name short 3|Size: 12,Magic: 0xefbbbf,Station name short: "93-3 FLZ"|
-	
 |[380]|Station type|141|
-		
 |[381:384]|Unknown|4|
-		
 |[385:388]|Genres|9|
-		
 |[389:392]|Flags|0x0700 01110000 HDReception,HDAudio,ScrollingPS|
-		
 |[393:396]|Unknown|12|
-		
 |[397:400]|Quality1|25|
-		
 |[401:403]|Quality2|71|
-		
 |[404:407]|Quality3|60|
-		
 |[408:411]|Return|3|
 
 ```
@@ -300,7 +263,9 @@ const struct TunerApiPayload_StationNotify {
 	uint32_t return;
 };
 ```
+## Service and method IDs
 
+```
 Service ID (SID):
 	Method ID (MID):
 			Function:
@@ -393,5 +358,5 @@ Service ID (SID):
 0xffff:
 	0x8001		get current station info
 				Send payload:	
-				Return payload:
-					
+				Return payload:					
+```
