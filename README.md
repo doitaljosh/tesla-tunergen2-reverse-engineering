@@ -14,7 +14,7 @@ The HARMAN tuner is an ARM Linux device based on the TI Jacinto 5 platform. It i
 - Tuner RF front-end: TEF6686HN
 
 ## Block Diagram:
-[Block Diagram](tesla-tunergen2-z50x.drawio.html)
+![Block Diagram](./tesla-tunergen2-z50x.drawio.svg)
 
 ## Software architecture:
 ### Audio stream:
