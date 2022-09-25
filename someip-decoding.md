@@ -23,7 +23,7 @@ Payload:
 0000   00 00 00 ff 00 01 6c 74 00 00 00 00 00 00 00 01
 0010   00 00 00 00
 ```
-### Payload fields:
+#### Payload fields:
 
 |Bytes|Type|Value|
 |---|---|---|
@@ -34,7 +34,7 @@ Payload:
 |[16:19]|uint32|0x00|
 
 
-### Response:
+#### Response:
 ```
 Service ID:	0x0065
 Method ID:	0x0005
@@ -46,7 +46,7 @@ Interface ver:	2
 Message type:	0x80 (response)
 Return code:	0x00 (ok)
 ```
-###Get station info:
+### Get station info:
 ```
 Service ID:	0xffff
 Method ID:	0x8100
@@ -84,7 +84,7 @@ Reserved: 0x000000:	0x00
 	Protocol:	0x06 (TCP)
 	Port:		0xecd2 60626
 ```	
-### Response:
+#### Response:
 ```
 Service ID:	0xffff
 Method ID:	0x8100
@@ -113,7 +113,7 @@ Reserved: 0x000000:	0x00
 	EventGroup ID:	0x00c9
 OptsArray len:	0x00000000
 ```
-### Subscribed response:
+#### Subscribed response:
 ```
 Service ID:	0x0065
 Method ID:	0x8005
@@ -152,7 +152,7 @@ Payload:
 0180   00 00 0c 00 00 00 19 00 00 00 43 00 00 00 3c 00
 0190   00 00 03
 ```
-### tunert output:
+#### tunert output:
 ```
 STATION EVENT
   Frequency: 93300
@@ -176,7 +176,7 @@ STATION EVENT
   Return: 3
 ```
 
-### Payload fields:
+#### Payload fields:
 |Bytes|Data type|Value|
 |---|---|---|
 |[0:3]|type|65|
