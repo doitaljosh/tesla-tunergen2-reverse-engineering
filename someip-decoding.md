@@ -1,9 +1,9 @@
 Tesla Tuner SOME/IP payload reverse engineering
 
 ## Summary:
-SOME/IP is the IPC protocol used by the Tesla ICE to control the radio tuner.
-The protocol itself is open source, but the payloads are undocumented.
-Extracting raw SOME/IP payloads is pretty easy, since Wireshark already has a
+SOME/IP is an IP-based IPC widely used in the automotive industry as a reliable means of communication between different services running on ethernet-connected ECUs.
+The protocol itself is open source, but the service interfaces, methods and parameters for the tuner are Tesla proprietary. 
+Extracting raw SOME/IP data from packets captured from a Tesla tuner interface is pretty easy, since Wireshark already has a
 decoder built-in for the high-level API. Below are some that I've already decoded.
 
 ## Payload dump samples:
